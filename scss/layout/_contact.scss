@@ -1,0 +1,183 @@
+/*--------------------------------------------------------------------------------------------*/
+/*-------------------------------------------CONTACT------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+
+.section_contact {
+  background-color: $color-grey;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contact_title {
+  margin-top: 14rem;
+  margin-left: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  color: $color-grey;
+  text-shadow: -8px -8px 16px rgba(255, 255, 255, 0.5),
+    8px 8px 16px rgba(0, 0, 0, 0.1), -2px -2px 4px white,
+    2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact_mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 6rem;
+}
+
+.contact_mail a {
+  position: relative;
+  width: 88rem;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-text-stroke-width: 0.2rem;
+  -webkit-text-stroke-color: $color-red;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  color: $color-grey;
+  border-bottom: 3px solid $color-red;
+  text-shadow: -8px -8px 16px rgba(255, 255, 255, 0.5),
+    8px 8px 16px rgba(0, 0, 0, 0.1), -2px -2px 4px white,
+    2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact_icon {
+  margin-top: 17rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-list {
+  list-style: none;
+  width: 20rem;
+  width: 50%;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.icon-list .github:hover .icon-link {
+  color: $color-github;
+}
+
+.icon-list .mail:hover .icon-link {
+  color: $color-google;
+}
+
+.icon-list .linkelin:hover .icon-link {
+  color: $color-linkelin;
+}
+
+.icon-list .icon-list__item {
+  padding: 1rem;
+}
+
+.icon-list .icon-list__item .icon-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 6rem;
+  text-decoration: none;
+  color: #b6bbc5;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 20%;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1),
+    -1rem -1rem 2rem rgba(255, 255, 255, 0.5);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1),
+    -1rem -1rem 2rem rgba(255, 255, 255, 0.5);
+}
+
+.icon-list .icon-list__item .icon-link:active {
+  -webkit-box-shadow: inset 1rem 1rem 2rem rgba(0, 0, 0, 0.1),
+    inset -1rem -1rem 2rem rgba(255, 255, 255, 0.5);
+  box-shadow: inset 1rem 1rem 2rem rgba(0, 0, 0, 0.1),
+    inset -1rem -1rem 2rem rgba(255, 255, 255, 0.5);
+}
+
+.icon-link i {
+  margin: auto;
+}
+
+@media screen and (max-width: 940px) {
+  .contact_title {
+    margin-top: 17rem;
+    margin-left: 4rem;
+    font-size: 10rem;
+  }
+  .contact_mail {
+    margin-top: 15rem;
+  }
+  .contact_mail a {
+    width: 60rem;
+    font-size: 3.5rem;
+  }
+  .contact_icon {
+    margin-top: 26rem;
+  }
+  .icon-list .icon-list__item .icon-link {
+    font-size: 5rem;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .contact_title {
+    margin-top: 18rem;
+    margin-left: 3rem;
+    font-size: 7rem;
+  }
+
+  .contact_mail a {
+    width: 50rem;
+    font-size: 3rem;
+  }
+  .contact_icon {
+    margin-top: 26rem;
+  }
+  .icon-list .icon-list__item .icon-link {
+    font-size: 4rem;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .contact_title {
+    margin-top: 12rem;
+    margin-left: 2rem;
+    font-size: 5rem;
+  }
+
+  .contact_mail a {
+    width: 30rem;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 0.1rem;
+    border-bottom: 2px solid $color-red;
+  }
+  .contact_icon {
+    margin-top: 10rem;
+  }
+  .icon-list .icon-list__item .icon-link {
+    font-size: 3rem;
+    width: 6rem;
+    height: 6rem;
+  }
+}

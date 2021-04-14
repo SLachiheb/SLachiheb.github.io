@@ -1,0 +1,20 @@
+footer {
+    display: grid;
+    place-items: center;
+    background-color: $color-black;
+    height: 15vh;
+
+    p {
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

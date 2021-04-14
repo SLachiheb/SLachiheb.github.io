@@ -1,0 +1,519 @@
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.container_header {
+  height: 85%;
+  display: flex;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container_header {
+    flex-direction: column-reverse;
+  }
+}
+
+/*-----------------------------------------------LOGO------------------------------------------*/
+.hero_left--logo {
+  position: absolute;
+  z-index: $z_index_logo;
+  height: 20%;
+  top: 3.2rem;
+  left: 7rem;
+
+  span {
+    position: relative;
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 900;
+    color: transparent;
+    background-image: linear-gradient(
+      75deg,
+      rgba(49, 226, 198, 1),
+      rgba(87, 141, 229, 1),
+      rgba(153, 83, 248, 1)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .hero_left--logo {
+    top: 2.5rem;
+    left: 4.5rem;
+    span {
+      font-size: 4rem;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hero_left--logo {
+    left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero_left--logo {
+    top: 1rem;
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+/*----------------------------------------PARTIE-GAUCHE---------------------------------------- */
+.hero_left {
+  position: relative;
+  flex-basis: 60%;
+
+  .hero_left--name {
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    font-size: 13rem;
+    font-weight: 400;
+    color: $color-blue;
+    --animate-duration: 3s;
+  }
+
+  .hero_left--job {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    color: $color-green;
+    --animate-duration: 3s;
+
+    h1 {
+      font-size: 15rem;
+      transition: 0.5s;
+
+      span {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        transition: 0.5s;
+        animation: b 5s ease-in-out infinite;
+
+        &::before {
+          z-index: 1;
+          content: '';
+          position: absolute;
+          top: calc(50% - 1.5rem);
+          left: 0;
+          width: 37%;
+          height: 10%;
+          background-color: $color-green;
+          transform-origin: left;
+          transform: scaleX(0);
+          /* transition: 0.5s; */
+          animation: barred_text 5s ease-in-out infinite;
+        }
+
+        &::after {
+          z-index: 1;
+          content: '';
+          position: absolute;
+          top: calc(50% - 1.5rem);
+          right: 19%;
+          width: 31%;
+          height: 10%;
+          background-color: $color-green;
+          transform-origin: left;
+          transform: scaleX(0);
+          animation: barred_text 5s ease-in-out infinite;
+        }
+
+        hide {
+          -webkit-text-stroke-width: 0.5rem;
+          -webkit-text-stroke-color: $color-green;
+          -webkit-text-fill-color: transparent;
+          animation: disparate_text 5s ease-in-out infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes b {
+  100% {
+    color: $color-blue;
+  }
+}
+
+@keyframes barred_text {
+  20%,
+  60% {
+    z-index: 1;
+    transform: scaleX(0);
+  }
+  70%,
+  100% {
+    z-index: 1;
+    transform: scaleX(1);
+  }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+@keyframes disparate_text {
+  20%,
+  70% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1979px) {
+  .hero_left {
+    flex-basis: 60%;
+
+    .hero_left--name {
+      top: 30rem;
+      left: 7rem;
+      font-size: 9rem;
+      font-weight: 700;
+    }
+
+    .hero_left--job {
+      top: 45rem;
+      left: 7rem;
+
+      h1 {
+        font-size: 10rem;
+
+        span hide {
+          -webkit-text-stroke-width: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .hero_left {
+    flex-basis: 40%;
+
+    .hero_left--name {
+      top: -1rem;
+      left: 7rem;
+      font-size: 9rem;
+    }
+
+    .hero_left--job {
+      top: 10rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero_left {
+    flex-basis: 40%;
+
+    .hero_left--name {
+      top: 5rem;
+      left: 5rem;
+      font-size: 7rem;
+    }
+
+    .hero_left--job {
+      top: 16rem;
+      left: 5rem;
+
+      h1 {
+        font-size: 7rem;
+
+        span hide {
+          -webkit-text-stroke-width: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero_left {
+    flex-basis: 40%;
+
+    .hero_left--name {
+      top: 3rem;
+      left: 3rem;
+      font-size: 3.5rem;
+    }
+
+    .hero_left--job {
+      top: 9rem;
+      left: 3rem;
+
+      h1 {
+        font-size: 4rem;
+
+        span {
+          &::before {
+            top: 3rem;
+          }
+
+          &::after {
+            top: 3rem;
+          }
+
+          hide {
+            -webkit-text-stroke-width: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------PARTIE-DROITE---------------------------------------- */
+.hero_right {
+  position: relative;
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --animate-duration: 3s;
+
+  .hero_right--ring {
+    position: relative;
+    width: 40rem;
+    height: 40rem; /*40rem*/
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.719);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40rem;
+      height: 40rem;
+      border-radius: 50%;
+      z-index: -1;
+      background: linear-gradient(
+        45deg,
+        rgba(49, 226, 198, 1),
+        rgba(87, 141, 229, 1),
+        rgba(153, 83, 248, 1)
+      );
+      transform: scale(1.2);
+      animation: animate_ring 2s linear infinite;
+      animation-play-state: running;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40rem;
+      height: 40rem;
+      border-radius: 50%;
+      z-index: -2;
+      background: linear-gradient(
+        45deg,
+        rgba(49, 226, 198, 1),
+        rgba(87, 141, 229, 1),
+        rgba(153, 83, 248, 1)
+      );
+      transform: scale(1.2);
+      animation: animate_ring 2s linear infinite;
+      animation-play-state: running;
+      filter: blur(20px);
+    }
+
+    img {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      font-size: 40px;
+    }
+  }
+}
+
+@keyframes animate_ring {
+  0% {
+    transform: rotate(0) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 1979px) {
+  .hero_right {
+    flex-basis: 40%;
+
+    .hero_right--ring {
+      margin-top: 0rem;
+      width: 30rem;
+      height: 30rem;
+
+      &::before {
+        width: 30rem;
+        height: 30rem;
+      }
+
+      &::after {
+        width: 30rem;
+        height: 30rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .hero_right {
+    flex-basis: 60%;
+
+    .hero_right--ring {
+      margin-top: 8rem;
+      width: 25rem;
+      height: 25rem;
+
+      &::before {
+        width: 25rem;
+        height: 25rem;
+      }
+
+      &::after {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero_right {
+    .hero_right--ring {
+      margin-top: 20rem;
+      width: 30rem;
+      height: 30rem;
+
+      &::before {
+        width: 30rem;
+        height: 30rem;
+      }
+
+      &::after {
+        width: 30rem;
+        height: 30rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero_right {
+    .hero_right--ring {
+      position: relative;
+      margin-top: 4rem;
+      width: 18rem;
+      height: 18rem;
+      background: rgba(255, 255, 255, 0.719);
+
+      &::before {
+        width: 18rem;
+        height: 18rem;
+      }
+
+      &::after {
+        width: 18rem;
+        height: 18rem;
+      }
+    }
+  }
+}
+
+/*--------------------------------------Boutton-Explorer----------------------------------------*/
+.header_button {
+  display: inline-block;
+  position: relative;
+  margin-top: -10rem;
+  left: 6.1%;
+
+  a {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $color-grey;
+  }
+
+  .btn:link,
+  .btn:visited {
+    background-color: $color-green;
+    border-radius: 1.2rem;
+    text-decoration: none;
+    padding: 2rem 5rem;
+    box-shadow: 4px 7px 17px $color-black;
+  }
+
+  .btn:hover,
+  .btn:active {
+    transform: translateY(-0.5rem);
+    box-shadow: 4px 12px 30px $color-black;
+  }
+}
+
+@media only screen and (max-width: 1979px) {
+  .header_button {
+    top: -5%;
+    left: 7rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .header_button {
+    top: 0%;
+    left: 7rem;
+    a {
+      font-size: 2.5rem;
+    }
+    .btn:link,
+    .btn:visited {
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header_button {
+    left: 5rem;
+    a {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header_button {
+    left: 3rem;
+    a {
+      font-size: 2rem;
+    }
+  }
+}
