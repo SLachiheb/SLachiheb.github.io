@@ -565,6 +565,12 @@ header {
   color: #e0e5eb;
 }
 
+.header_button a i {
+  margin-left: 1rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header_button .btn:link,
 .header_button .btn:visited {
   background-color: #31e2c6;

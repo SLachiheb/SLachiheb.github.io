@@ -461,6 +461,11 @@ header {
     font-weight: 700;
     text-align: center;
     color: $color-grey;
+
+    i {
+      margin-left: 1rem;
+      transform: rotate(-45deg);
+    }
   }
 
   .btn:link,
