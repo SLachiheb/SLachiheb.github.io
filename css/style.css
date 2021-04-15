@@ -1668,15 +1668,14 @@ header {
   text-decoration: dotted underline;
 }
 
-.blog-card .details ul li {
+.blog-card .details ul li,
+.blog-card .details .tags ul {
   display: inline-block;
 }
 
-.blog-card .details .without_link:before,
-.blog-card .details .with_link:before,
-.blog-card .details .tags ul:before {
-  margin-right: 10px;
-  content: '\f007';
+.blog-card .details i {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .blog-card .details .tags li:not(:last-child):after {
