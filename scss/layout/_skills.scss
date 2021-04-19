@@ -60,6 +60,7 @@
   position: relative;
   background-color: $color-blue;
   padding-top: 5vh;
+  padding-bottom: 15rem;
 }
 
 .container-skills {
@@ -151,10 +152,15 @@
   animation: none;
 }
 
-.card-skills p.title:hover {
-  color: transparent;
-  -webkit-text-stroke: 1px #31e2c6;
+.card-skills p.title {
+  color: $color-red;
+  font-weight: 500;
 }
+
+// .card-skills p.title:hover {
+//   color: transparent;
+//   -webkit-text-stroke: 1px #31e2c6;
+// }
 
 .card-skills .p-skills {
   font-size: 1.8rem;
@@ -165,19 +171,19 @@
 .card-skills .p-skills span {
   margin-right: 2rem;
   margin-left: 3rem;
-  animation: glow 1.5s ease-in-out infinite alternate;
+  // animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff, 0 0 45px #31e2c6,
-      0 0 75px #31e2c6, 0 0 85px #31e2c6;
-  }
-  to {
-    text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff,
-      0 0 40px #31e2c6, 0 0 45px #31e2c6, 0 0 55px #31e2c6, 0 0 80px #31e2c6;
-  }
-}
+// @keyframes glow {
+//   from {
+//     text-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff, 0 0 45px #31e2c6,
+//       0 0 75px #31e2c6, 0 0 85px #31e2c6;
+//   }
+//   to {
+//     text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff,
+//       0 0 40px #31e2c6, 0 0 45px #31e2c6, 0 0 55px #31e2c6, 0 0 80px #31e2c6;
+//   }
+// }
 
 @media only screen and (max-width: 1109px) {
   .wrapper-grid {
