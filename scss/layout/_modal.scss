@@ -159,7 +159,7 @@
       rgba(0, 0, 0, 0.5) 42%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(./../public/images/tourisme.png);
+    url(./../../public/images/tourisme_without.png);
   background-position: left;
 }
 
@@ -175,7 +175,7 @@
       rgba(0, 0, 0, 0.5) 42%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(./../../public/images/bank.png);
+    url(./../../public/images/card.jpg);
   background-position: center;
 }
 
@@ -191,7 +191,7 @@
       rgba(0, 0, 0, 0.5) 42%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(./../public/images/doctorante.png);
+    url(./../../public/images/doctorante_without.png);
   background-position: left;
 }
 
@@ -207,8 +207,8 @@
       rgba(0, 0, 0, 0.5) 42%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(./../public/images/foodshow.png);
-  background-position: center;
+    url(./../../public/images/foodshow_without.jpg);
+  background-position: right;
 }
 
 .modal .close-modal {
